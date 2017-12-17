@@ -14,4 +14,5 @@ public class SpringIn5StepsApplication {
 		int result = binarySearch.binarySearch(new int[] {1,2,3,4}, 3);
 		System.out.println(result);
 	}
+
 }
