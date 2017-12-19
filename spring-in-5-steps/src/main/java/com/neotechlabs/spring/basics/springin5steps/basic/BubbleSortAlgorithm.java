@@ -1,14 +1,14 @@
-package com.neotechlabs.spring.basics.springin5steps;
+package com.neotechlabs.spring.basics.springin5steps.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("quick")
-public class QuickSortAlgorithm implements SortAlgorithm {
+@Qualifier("bubble")
+public class BubbleSortAlgorithm implements SortAlgorithm {
 	
 	public int[] sort(int[] numbers) {
-		// Implementation of Quick sort
+		// Implementation of Bubble sort
 		return numbers;
 	}
 
