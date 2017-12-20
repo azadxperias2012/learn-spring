@@ -1,5 +1,8 @@
 package com.neotechlabs.spring.basics.springin5steps.basic;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -20,4 +23,13 @@ public class BinarySearchImpl {
 		return 3;
 	}
 
+	@PostConstruct
+	public void postConstruct() {
+		System.out.println("postConstruct");
+	}
+
+	@PreDestroy
+	public void preDestroy() {
+		System.out.println("preDestroy");
+	}
 }
