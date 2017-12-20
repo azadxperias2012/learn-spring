@@ -1,6 +1,5 @@
 package com.neotechlabs.spring.basics.springin5steps;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,18 +11,20 @@ import com.neotechlabs.spring.basics.springin5steps.basic.BinarySearchImpl;
 public class SpringIn5StepsBasicApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class);
+		try (AnnotationConfigApplicationContext applicationContext =
+				new AnnotationConfigApplicationContext(
+				SpringIn5StepsBasicApplication.class)) {
 
-		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
-		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+			BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+			BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 
-		System.out.println(binarySearch);
-		System.out.println(binarySearch1);
+			System.out.println(binarySearch);
+			System.out.println(binarySearch1);
 
-		int result = binarySearch.binarySearch(new int[] { 1, 2, 3, 4 }, 3);
-		int result1 = binarySearch.binarySearch(new int[] { 1, 2, 3, 4 }, 3);
-		System.out.println(result);
-		System.out.println(result1);
+			int result = binarySearch.binarySearch(new int[] { 1, 2, 3, 4 }, 3);
+			int result1 = binarySearch.binarySearch(new int[] { 1, 2, 3, 4 }, 3);
+			System.out.println(result);
+			System.out.println(result1);
+		}
 	}
-
 }
