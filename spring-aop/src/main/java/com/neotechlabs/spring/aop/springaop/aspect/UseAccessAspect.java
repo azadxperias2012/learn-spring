@@ -13,7 +13,7 @@ public class UseAccessAspect {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Before("execution(* com.neotechlabs.spring.aop.springaop.data.*.*(..))")
+	@Before("com.neotechlabs.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
 	public void before(JoinPoint joinPoint) {
 		logger.info(" Check for user access ");
 		logger.info(" Allowed execution for - {}", joinPoint);
