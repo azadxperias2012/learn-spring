@@ -27,8 +27,8 @@ public class SpringAopApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info(business1.calculateSomething());
-		logger.info(business2.calculateSomething());
+		logger.info("Inside business {}", business1.calculateSomething());
+		logger.info("Inside business {}", business2.calculateSomething());
 	}
 
 }

@@ -16,7 +16,10 @@ public class CommonJoinPointConfig {
 	@Pointcut("bean(*dao*)")
 	public void beanContainingDao() {}
 	
-	@Pointcut("within(* com.neotechlabs.spring.aop.springaop.data..*)")
+	@Pointcut("within(com.neotechlabs.spring.aop.springaop.data..*)")
 	public void dataLayerExecutionWithWithin() {}
+	
+	@Pointcut("@annotation(com.neotechlabs.spring.aop.springaop.aspect.TrackTime)")
+	public void trackTimeAnnotation() {}
 
 }
