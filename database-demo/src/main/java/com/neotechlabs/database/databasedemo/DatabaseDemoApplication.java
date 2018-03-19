@@ -1,5 +1,7 @@
 package com.neotechlabs.database.databasedemo;
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.neotechlabs.database.databasedemo.entity.Person;
 import com.neotechlabs.database.databasedemo.jdbc.PersonJdbcDao;
 
 @SpringBootApplication
@@ -26,5 +29,11 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 		logger.info("All users -> {}", dao.findAll());
 		logger.info("User id 10001 -> {}", dao.findById(10001));		
 		logger.info("Deleting 10002 -> No of Rows Deleted {}", dao.deleteById(10002));
+		
+		logger.info("Inserting 10004 -> {}", dao.insert(
+				new Person(10004, "Fathi", "Chennai", new Date())));
+		
+		logger.info("Updating 10003 -> {}", dao.update(
+				new Person(10003, "Ruhan", "Chennai", new Date())));
 	}
 }
