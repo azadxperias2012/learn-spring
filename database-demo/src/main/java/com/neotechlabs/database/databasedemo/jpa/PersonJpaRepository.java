@@ -15,6 +15,7 @@ import com.neotechlabs.database.databasedemo.entity.Person;
 @Transactional
 public class PersonJpaRepository {
 	
+	// connect to data source
 	@PersistenceContext
 	EntityManager entityManager;
 	

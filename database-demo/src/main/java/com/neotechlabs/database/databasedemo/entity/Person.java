@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name="find_all_person", query="select p from Person p")
+//@NamedQuery(name="find_all_person", query="select p from Person p")
 public class Person {
 	
 	@Id
