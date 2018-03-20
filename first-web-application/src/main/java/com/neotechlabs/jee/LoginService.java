@@ -1,4 +1,4 @@
-package com.neotechlabs;
+package com.neotechlabs.jee;
 
 public class LoginService {
 	

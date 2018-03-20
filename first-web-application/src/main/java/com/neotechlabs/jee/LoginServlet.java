@@ -1,4 +1,4 @@
-package com.neotechlabs;
+package com.neotechlabs.jee;
 
 import java.io.IOException;
 
