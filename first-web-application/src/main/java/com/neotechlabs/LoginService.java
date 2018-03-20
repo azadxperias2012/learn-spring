@@ -1,6 +1,6 @@
 package com.neotechlabs;
 
-public class UserValidationService {
+public class LoginService {
 	
 	public boolean isUserValid(String user, String password) {
 		if (user.equals("neotechlabs") &&
