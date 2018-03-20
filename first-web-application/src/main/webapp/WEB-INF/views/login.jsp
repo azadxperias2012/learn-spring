@@ -10,8 +10,12 @@
 <body>
 	<% Date date = new Date(); %>
 	<h1>
-		<div>Current date is <%=date%></div>
-		<div>My name is ${name} and password is ${password}</div>
+		<div>Current date is <%=date%></div>		
 	</h1>
+	
+	<form action="/login.do" method="post">
+		Enter your name <input type="text" name="name" />
+		<input type="submit" value="Login" />
+	</form>
 </body>
 </html>
