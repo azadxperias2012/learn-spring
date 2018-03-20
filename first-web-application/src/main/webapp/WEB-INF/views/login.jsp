@@ -11,7 +11,7 @@
 	<% Date date = new Date(); %>
 	<h1>
 		<div>Current date is <%=date%></div>
-		<div>My First JSP ${name}</div>
+		<div>My name is ${name} and password is ${password}</div>
 	</h1>
 </body>
 </html>
