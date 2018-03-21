@@ -7,6 +7,6 @@
 <title>Welcome</title>
 </head>
 <body>
-	<h1>Welcome ${name}</h1>
+	<h1>Welcome ${name} and Password is ${password}</h1>
 </body>
 </html>
